@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css" media="screen">
+		body, button, input, select, textarea {
+		    font: 14px "Microsoft YaHei", Helvetica, Arial, Lucida Grande, Tahoma, sans-serif;
+		    color: #444;
+		    background: #f1f1f1;
+		}
+		#side1{
+			width:300px;
+			height:300px;
+			margin:100px auto;
+			border:1px solid #ccc;
+		}
+		#side2{
+			width:300px;
+			height:500px;
+			margin:100px auto;
+			border:1px solid #ccc;
+		}
+		.side_top{
+			width:300px;
+			height:40px;
+			line-height:40px;
+			border-bottom:1px solid #ccc;
+		}
+		.side_top p.line{
+			float: left;
+		    width: 40px;
+		    height: 40px;
+		    font-size: 36px;
+		    font-weight: 300;
+		    color: #2f889a;
+		    line-height: 18px;
+		    text-align: center;
+		    margin: 0 15px 0 0;
+		    padding: 1px 0;
+		    border-right: 1px solid #ddd;
+		    border-radius: 2px 0 0 0;
+		    position:relative;
+		}
+		/*三条杠*/
+		.side_top i{
+			width: 15px;
+		    height: 3px;
+		    background: #2f889a;
+		    display:inline-block;
+		}
+		.side_top i::before{
+			content:"";
+			width:15px;
+			height:3px;
+			background:#2f889a;
+			position:absolute;
+			top:15px;
+			left:12px;
+		}
+		.side_top i::after{
+			content:"";
+			width:15px;
+			height:3px;
+			background:#2f889a;
+			position:absolute;
+			top:27px;
+			left:12px;
+		}
+		.main{
+			width:300px;
+			height:258px;
+			position:relative;
+			background:#fff;
+		}
+		.main a{
+			padding:5px;
+			border-radius: 5px;
+			background:blue;
+			text-decoration:none;
+			color:white;
+		}
+		.slider li{
+			width:300px;
+			height:92px;
+			border-bottom:1px dashed #ccc;
+			background:#fff;
+		}
+		.slider li .tu{
+			float:left;
+			width:50px;
+			height:50px;
+			border-radius:50%;
+			margin: 10px 10px;
+    		overflow: hidden;
+		}
+		.slider li img{
+		}
+		.slider li .font{
+			float:left;
+			margin-top:10px;
+		}
+		.slider li .font h4{
+			display: block;
+		    padding: 0 0 5px;
+		    color: #059;
+		    width: auto;
+		}
+		.slider li .font a{
+			text-decoration:none;
+			color: #059;
+		}
+		#sp{
+			width:300px;
+			height:200px;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<div id="side1">
+		<div class="side_top">
+			<P class="line"><i></i></P>
+			<p>热门标签</p>
+		</div>
+		<canvas class="main">
+			
+		</canvas>
+	</div>
+	<div id="side2">
+		<div class="side_top">
+			<P class="line"><i></i></P>
+			<p>热门评论</p>
+		</div>
+	</div>
+	<p id="sp"></p>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="lib/MVC.js"></script>
+	<script type="text/javascript" src="lib/slider.js"></script>
+	<script type="text/javascript">
+		// const game = new Game();
+		MVC.install();
+		var together = new Date();
+together.setFullYear(2018, 8, 18);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+		function timeElapse(date){
+	var current = Date();
+	var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
+	var days = Math.floor(seconds / (3600 * 24));
+	seconds = seconds % (3600 * 24);
+	var hours = Math.floor(seconds / 3600);
+	if (hours < 10) {
+		hours = "0" + hours;
+	}
+	seconds = seconds % 3600;
+	var minutes = Math.floor(seconds / 60);
+	if (minutes < 10) {
+		minutes = "0" + minutes;
+	}
+	seconds = seconds % 60;
+	if (seconds < 10) {
+		seconds = "0" + seconds;
+	}
+	var result = "<span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 时 <span class=\"digit\">" + minutes + "</span> 分 <span class=\"digit\">" + seconds + "</span> 秒"; 
+	$("#sp").html(result);
+}
+
+		timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+	</script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+{
+	"data":[
+		{
+			"img":"img/1.png",
+			"h4":"thinkphp分页中文参数乱码解决",
+			"p":"今天发现分页有中文参数会出现乱码，以前都是查询字符串或数字没有问题，所以没发现。URL在Apache上是/不会有问题，但是在IIS上用/会乱码，必须用?=这种格式才行。在某个问题下的回答，终于把分页的格式转成了?=，解决了这个问题，特此分享下，如有更多解决办法欢迎探讨。只用改'ThinkPHP/library/Think/Page.class'文件：把：return str_replace(urlencode('[PAGE]'), $page, $thi",
+			"time":" 4周前 ",
+			"m1":"ThinkPHP",
+			"m2":"thinkphp",
+			"m3":""
+		},
+		{
+			"img":"img/2.png",
+			"h4":"PHP如何配置session存储在redis",
+			"p":"当网站用户量增多的时候，正常的session存取就会出现有点慢的问题，如果提高速度呢。我们可以使用redis去保存session的会话信息。PHP的会话默认是以文件的形式存在的，可以配置到NoSQL中，即提高了访问速度，又能很好地实现会话共享。 配置方式如下：方法一：修改 php.ini 的设置session.save_handler = redissession.save_path = tcp://127.0.0.1:6379&",
+			"time":"  1个月前  ",
+			"m1":"php",
+			"m2":"session",
+			"m3":"redis"
+		},
+		{
+			"img":"img/3.png",
+			"h4":"thinkphp如何从gif提取第一帧生成静态缩略图",
+			"p":"在开发app项目中，为了节省以及加快客户端的加载速度，在展示gif的位置需要提供静态图加载，点击放大才加载实际的动态图片。那么在thinkphp中如何使用GD库去截取gif第一帧生成静态缩略图，具体看下面实现的方式。1、修改文件 /ThinkPHP/Library/Think/Image/Driver/Gd.class.php2.找到方法 大于40行 public function open($imgname)。将下面的方法：if('gif' == $this",
+			"time":"  3个月前  ",
+			"m1":"thinkphp",
+			"m2":"gif",
+			"m3":"缩略图"
+		},
+		{
+			"img":"img/4.png",
+			"h4":"php完全清除html,空格,换行,提取纯文字的三种方法",
+			"p":"在php的开发中，经常会使用到提取一段文本的纯文本数据，那么php如何完全清除html,空格,换行,提取纯文字呢，以下列举三种方法。方法一：function DeleteHtml($str) {     $str = trim($str); //清除字符串两边的空格    $str = preg_replace(/",
+			"time":"  5个月前  ",
+			"m1":"",
+			"m2":"php",
+			"m3":"html"
+		},
+		{
+			"img":"img/5.png",
+			"h4":"阿里云ECS使用PHPMailer报错smtp connect failed",
+			"p":"在阿里云ECS服务器上部署一套thinkphp开发的程序，需要用到phpmailer邮件发送功能，在本地测试完成之后，迁移到线上邮件发不出去，一直提示 SMTP connect failed。错误提示：SMTP connect failed（服务器环境Linux+nginx+php+mysql）解决的方法有以下几种：1、查看是否打开了socket与openssl扩展。可以使用phpinfo();如果没有那就找到php.ini文件并打开，将extension=php_openssl.dll这个句代",
+			"time":"  6个月前  ",
+			"m1":"PHPMailer",
+			"m2":"smtp connect failed",
+			"m3":"阿里云ECS"
+		},
+		{
+			"img":"img/6.png",
+			"h4":"jquery click在iOS点击事件失效的解决办法",
+			"p":"将h5页面放到ios客户端加载操作的时候，发现用jquery绑定的节点事件都是失效的。解决办法有下面的四种方式：1、将 click 事件直接绑定到目标元素（即 .target）上2、将目标元素换成 <a> 或者 button 等可点击的元素3、将 click 事件委托到非 document 或 body 的父级元素上4、给目标元素加一条样式规则 cursor: pointer;推荐后两种。从解决办法来看，推测在 safari 中，不可点击的元素的点击事件不会冒泡到父级元素。通过添加 ",
+			"icon_text1":"PHP笔记",
+			"time":"  6个月前  ",
+			"m1":"iOS",
+			"m2":"jquery",
+			"m3":""
+		},
+		{
+			"img":"img/1.png",
+			"h4":"如何用thinkphp生成卡片功能",
+			"p":"在开发中会需要摘取文章部分内容，生成卡片或者明信片之内的功能。生成一张图片便于传播与分享。这里是我结合thinkphp写的生成卡片的功能，不是很完美但是很实用。效果如下：php代码：/**生成话题图片  * @param $filename 生成的文件名 * @param $source   合并的头部大图 * @param $title&nbs",
+			"icon_text1":"PHP",
+			"time":"  9个月前  ",
+			"m1":"thinkphp",
+			"m2":"卡片",
+			"m3":""
+		},
+		{
+			"img":"img/2.png",
+			"h4":"php用gd库实现图片合并功能",
+			"p":"在实际的开发中需要用到合并图片的功能，比如实现微信中的头像图片合并功能。这里主要是使用的gd库去操作的，当然还可以用ImageMagick去实现这个功能。效果如下：php代码：$pics   = array(    '1.jpg',    '2.jpg',    '3.jpg',",
+			"icon_text1":"PHP",
+			"time":"  9个月前  ",
+			"m1":"gd",
+			"m2":"图片",
+			"m3":"图片合并"
+		},
+		{
+			"img":"img/3.png",
+			"h4":"如何简单的在centos下yum安装redis",
+			"p":"1、安装redis    yum instal redis2、查看是否安装php-redis扩展    php-m 3、已安装即可跳过。安装php-redis扩展插件    yum install php-redis3、启动并设为开机启动    service redis start    chkconfig redis on4、卸载redis    yum remo",
+			"icon_text1":"Thinkphp",
+			"time":"  9个月前  ",
+			"m1":"redis",
+			"m2":"",
+			"m3":""
+		},
+		{
+			"img":"img/4.png",
+			"h4":"如何解决php文件修改不生效? Zend OPcache关闭即可",
+			"p":"在测试服务器上面开发，总是修改了php文件不能够即时的显示效果，弄的我很闹心。总是删除缓存文件，有时候我连源文件都删除了。实在是受不了，找个空的时间准备弄一下，发现在php.ini配置中opcache配置是开启的状态，只要将其关闭掉就可以了。找到方法，我就去尝试一下。经过尝试发现确实是挺好使的，注意，我这里是linux测试服务器开发环境，无所谓的。在正式环境，亲们要慎重。方法：1、查找php.ini文件的位置。命令：find / -name 'php.ini';地址：/usr/l",
+			"icon_text1":"PHP",
+			"time":"  9个月前  ",
+			"m1":"php",
+			"m2":"Zend OPcache",
+			"m3":"opcache"
+		},
+		{
+			"img":"img/5.png",
+			"h4":"PHP 微信APP支付 整合 thinkphp3.2.3",
+			"p":"php开发APP支付功能中，涉及到微信APP支付功能。为了考虑数据的严密性，加密的过程全部都需要在服务端进行生成。微信APP支付与支付宝的还不太一样。微信APP支付需要二次的加密请求才可以完成整个服务端的任务。1、首先第一次需要加密请求拿到prepay_id，就是预支付订单号。2、接着在拿得到的预支付订单号进行加密，生成最终APP端请求的参数。3、注意的是，微信开发中请求和发送的结构都是xml。以下代码直接可以复制，简单修改点参数就可以使用。/*微信签名 by gm ",
+			"icon_text1":"Thinkphp",
+			"time":"   10个月前   ",
+			"m1":"APP支付",
+			"m2":"微信",
+			"m3":"微信支付  thinkphp"
+		},
+		{
+			"img":"img/6.png",
+			"h4":"如何用thinkphp3.2.3整合支付宝APP支付功能",
+			"p":"如何用thinkphp3.2.3框架整合支付宝App支付功能。由于安卓和ios端不够保密，所以服务端不仅仅是生成签名这么简单，而是需要将所有请求的参数直接转成字符串。客户端直接请求即可。在开发之前请看官方文档和下载对应的sdk。官方文档: https://doc.open.alipay.com/docs/doc.htm?treeId=204&articleId=105051&docType=1 生成密钥https://docs.open.alipa",
+			"icon_text1":"Thinkphp",
+			"time":"   10个月前   ",
+			"m1":"App支付",
+			"m2":"支付宝",
+			"m3":"thinkphp"
+		},
+		{
+			"img":"img/1.png",
+			"h4":"phpBOM头(字符&#65279;)出现的原因以及解决方法",
+			"p":"今天在项目中发现，客户端在使用ajax得到返回值时，无法匹配字符串。总是报错，打开页面接口发现，页面的头部出现了&#65279;的字符(BOM头)，找到问题了，那么直接用代码清除掉即可。php隐形字符&#65279解释如下：UTF-8 编码的文件可以分为无 BOM 和 BOM 两种格式。何谓BOM？　EF BB BF 这三个字节就叫BOM，全称是Byte Order Mard在utf8文件中常用BOM来表明这个文件是UTF-8文",
+			"icon_text1":"PHP",
+			"time":"   10个月前   ",
+			"m1":"BOM",
+			"m2":"BOM头",
+			"m3":""
+		},
+		{
+			"img":"img/2.png",
+			"h4":"php抓取https地址图片失败 ",
+			"p":"PHP.ini默认配置下，用file_get_contents读取https的链接，就会如下错误：Warning: fopen() [function.fopen]: Unable to find the wrapper https - did you forget to enable it when y",
+			"icon_text1":"PHP",
+			"time":"   一年前   ",
+			"m1":"https",
+			"m2":"php",
+			"m3":""
+		},
+		{
+			"img":"img/3.png",
+			"h4":"php方法simplexml_load_string()解析xml转数组失败",
+			"p":"用php方法simplexml_load_string()解析xml成数组失败，总是返回false。找了很多方法，终于知道在php用simplexml_load_string()解析xml成数组的时候，字符串中不要包含一些特殊字符，我这边的xml中包含了&符号，于是导致的解析失败。具体有哪些特殊符号不可以，我没有去一一校验。那么，怎么解决这个解析出错的问题呢？只要将得到的特殊符号替换成某个特定字符，在解析完成之后将特定字符转化成&即可。$info = '",
+			"icon_text1":"PHP",
+			"time":"    1年前    ",
+			"m1":"php",
+			"m2":"simplexml_load_string()",
+			"m3":""
+		},
+		{
+			"img":"img/4.png",
+			"h4":"以图搜图 我知图 相似图像搜索与推荐API服务 PHP接口类文档",
+			"p":"最近公司开发新业务以图搜图，用的是我知图这家公司的相似图像搜索与推荐API服务。服务简介 : 本服务提供基于图像内容的相似图像搜索. 即用输入图片本身的颜色分布, 几何形状, 纹理来搜索相似图片, 并将结果按与输入图片的相似度打分排序.对方只是简单的罗列了几个接口的方法，这里呢，我就整理出一个PHP接口类。<?php/** * Created by PhpStorm. * User: Adminis",
+			"icon_text1":"PHP",
+			"time":"     1年前     ",
+			"m1":"以图搜图",
+			"m2":"图像搜索",
+			"m3":"我知图"
+		},
+		{
+			"img":"img/5.png",
+			"h4":"php array_push与$arr[]=$value性能比较",
+			"p":"用php方法simplexml_load_string()解析xml成数组失败，总是返回false。找了很多方法，终于知道在php用simplexml_load_string()解析xml成数组的时候，字符串中不要包含一些特殊字符，我这边的xml中包含了&符号，于是导致的解析失败。具体有哪些特殊符号不可以，我没有去一一校验。那么，怎么解决这个解析出错的问题呢？只要将得到的特殊符号替换成某个特定字符，在解析完成之后将特定字符转化成&即可。$info = '",
+			"icon_text1":"PHP",
+			"time":"    1年前    ",
+			"m1":"php",
+			"m2":"simplexml_load_string()",
+			"m3":""
+		},
+		{
+			"img":"img/6.png",
+			"h4":"整理常用thinkphp的模型操作方法",
+			"p":"项目中需要用到很多模型的操作方法，这里自己结合经验整理了一些我认为常用的方法。以下实例用 USER 表 作为数据表，进行演示。/** * 列表 加分页 * @param string $field * @param array $where * @param int $page * @param i",
+			"icon_text1":"Thinkphp",
+			"time":"    1年前    ",
+			"m1":"",
+			"m2":"",
+			"m3":""
+		},
+		{
+			"img":"img/1.png",
+			"h4":"php &not禁止转义字符",
+			"p":"在php中输出字符串“&not”却显示成了“¬”，怎样能正常输出呢?通过php内置函数HTMLspecialchars来实现&not转义。echo htmlspecialchars(&not)",
+			"icon_text1":"Thinkphp",
+			"time":"    1年前    ",
+			"m1":"thinkphp",
+			"m2":"路由",
+			"m3":"正则表达式"
+		},
+		{
+			"img":"img/2.png",
+			"h4":"如何使用thinkphp路由正则表达式优化地址链接",
+			"p":"用thinkphp开发项目，其中搜索模块需要携带很多的参数，就会出现地址栏的链接很长，这样不仅看上去不美观，对于搜索引擎来说也是不友好的链接。于是，就需要将其修改成简短干练的地址链接。thinkphp中是支持路由重写的，需要自己编写重写规则。在编写的过程中，遇到一个问题。可以说是一个老大难的问题，那就是中文，搜索关键字需要匹配中文。在尝试各种正则匹配规则都失败的情况下，我这里只能写成?keyword=关键字的格式。下面我们看，具体的实例：未优化地址：/model/search.php?style",
+			"icon_text1":"PHP",
+			"time":"    1年前    ",
+			"m1":"",
+			"m2":"",
+			"m3":""			
+		},
+		{
+			"img":"img/3.png",
+			"h4":"如何用php和js判断手机端访问的方法",
+			"p":"随着只能手机的普及，人们对于手机网站的应用越来越多。那么，在开发中，我们怎么用php去判断是否来自手机端的访问，直接定位到相应的模板展示页面。下面有两种方法可以判断用户是否是手机端访问的方法。1、php方法。2、js方法。可以根据项目的需求，自行的选择实现的方法。 一、php判断是否手机端访问的方法。function ismobile() {    // 如果有HTTP_X_WAP_PROFILE则一定是移动设备",
+			"icon_text1":"PHP",
+			"time":"    1年前    ",
+			"m1":"php",
+			"m2":"手机端",
+			"m3":""	
+		},
+		{
+			"img":"img/4.png",
+			"h4":"如何使用php中ftp函数上传文件以及解决上传文件失败的方法",
+			"p":"在php中如何使用ftp函数实现此项功能呢？以及怎么排查php使用ftp函数上传文件失败的原因？因为系统重构实现均衡负载，网站程序与文件服务器不在一台机子上。于是，程序在上传文件的同时就要将文件上传到文件服务器上。这里涉及到windows主机上传到linux主机，linux主机上传到linux主机。这两个之间呢，只是稍微的有点区别，因为windows的路径可以兼容linux路径，但是linux的路径不兼容windows主机'\\'的写法。所以，在写路径的时候稍加注意即可。下面，就",
+			"icon_text1":"ftp",
+			"time":"   1年前     ",
+			"m1":"php",
+			"m2":"上传文件",
+			"m3":""	
+		}
+	]
+}

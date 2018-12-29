@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<style type="text/css" media="screen">
+		
+		/*声明字体*/
+		@font-face {
+			font-family: 'LiDeBiao-Xing3581258';
+			src: url('./fonts/LiDeBiao-Xing3.eot');
+			src: url('./fonts/LiDeBiao-Xing3.eot?#iefix') format('embedded-opentype'),
+			url('./fonts/LiDeBiao-Xing3.woff') format('woff'),
+			url('./fonts/LiDeBiao-Xing3.ttf') format('truetype'),
+			url('./fonts/LiDeBiao-Xing3.svg#LiDeBiao-Xing3') format('svg');
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		p.demo {
+			font-family: "LiDeBiao-Xing3581258";
+			font-size: 24px;
+		}
+	</style>	
+	
+</head>
+<body>
+	<header>
+		<div class="header_auto">
+			<div>欢迎光临！</div>
+			<a href="javascript:;"><i></i>登录</a>
+		</div>
+	</header>
+	<nav>
+		<div>
+			<p class="demo">
+			<img src="img/zhou.jpg" alt="" width="200px" height="80px">
+		英雄不问出处
+		</p>
+		<ul>
+			<li class="blue"><a href="" title="" class="white">首页</a></li>
+			<li><a href="" title="">网站·编程</a>
+				<ul class="show">
+					<li><a href="">WordPress</a></li>
+					<li><a href="">ASP.NET</a></li>
+					<li><a href="">JavaWeb</a></li>
+				</ul>
+			</li>
+			<li><a href="lvyou.html" title="">生活·旅游</a></li>
+			<li><a href="jilu.html" title="">点滴·记录</a></li>
+			<li><a href="" title="">给我·留言</a></li>
+			<li><a href="" title="">资源·分享</a></li>
+			<div class="search">
+				<a href="javascript:;"></a>
+				<span></span>
+			</div>
+		</ul>
+		</div>
+	</nav>
+	<div id="search" class="hide">
+		<input type="text" placeholder="输入搜索内容">
+		<button type="">搜索</button>
+	</div>
+	<div class="water">
+		<img src="img/voice.png" alt="">
+		<ul>
+			<!-- <li><a href="">2017-8-25，今天更新了以前写的微信支付</a></li>
+			<li><a href="">2017-8-25，今天更新了以前写的微信支付</a></li>
+			<li><a href="">2017-8-25，今天更新了以前写的微信支付</a></li>
+			<li><a href="">2017-8-25，今天更新了以前写的微信支付</a></li>
+			<li><a href="">2017-8-25，今天更新了以前写的微信支付</a></li>
+			<li><a href="">2017-8-25，今天更新了以前写的微信支付</a></li> -->
+		</ul>	
+		<!-- <marquee behavior="alternate" direction="right" style="display-inline">2017-8-25，今天更新了以前写的微信支付</marquee> -->
+	</div>
+	<div class="main">
+		<div class="main_inner">
+			<div class="main_left">
+				<div class="carousel">
+					<div class="carousel-inner">
+						<div class="row">
+							<div class="row_top">
+								<div class="list">
+									
+								</div>
+								<ul class="page">
+										<li><a href="javascript:;" class="prev">上一页</a></li>
+										<li><a href="javascript:;" class='next'>下一页</a></li>
+									</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_right">
+				<div id="person">
+					<p><img src="img/me.jpeg"/></p>
+				<h4 class="username">周..</h4>
+				<p class="text-center">男，程序猿一枚</p>
+				<p class="text-center">
+					<button>
+						<span class='iconfont'>&#xe672;</span>
+					</button>
+					<button>
+						<span class='iconfont'>&#xe72b;</span>
+					</button>
+				</p>
+				<p class='geyan text-center'>梦想还是要有的，万一实现了呢。</p>
+				</div>
+				<div id="side0">
+					<div class="side_top">
+						<P class="line"><i></i></P>
+						<p>推荐文章</p>
+					</div>
+					<ul>
+						<li><span class="one">1</span><a href="">怎么在你的博客显示畅言热门评论</a></li>
+						<li><span class="two">2</span><a href="">myeclipse开发项目使用ssh框架（二）：连接MySQL数据库</a></li>
+						<li><span class="three	">3</span><a href="">myeclipse开发项目使用ssh框架（一）：搭建ssh框架</a></li>
+						<li><span>4</span><a href="">ASP.NET中连接数据库的各种方法</a></li>
+						<li><span>5</span><a href="">struts2文件上传和下载</a></li>
+						<li><span>6</span><a href="">JavaWeb用户登录功能的实现</a></li>
+						<li><span>7</span><a href="">JAVA环境变量配置详解</a></li>
+						<li><span>8</span><a href="">WordPress 博客添加站长统计的方法</a></li>
+						<li><span>9</span><a href="">Java实现微信扫码支付模式二功能</a></li>
+					</ul>
+				</div>
+				<div id="side1">
+					<div class="side_top">
+						<P class="line"><i></i></P>
+						<p>热门标签</p>
+					</div>
+					<canvas class="main-in">
+						
+					</canvas>
+				</div>
+				<div id="side2">
+					<div class="side_top">
+						<P class="line"><i></i></P>
+						<p>热门评论</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div>
+			<p>Copyright © 老周博客 · WENGFW.COM ·  <a href="">豫ICP备17018950号-1</a> ·老周博客勉强的运行了:<span id="sp"></span>感谢各位支持！！！</p>
+			<p><a href="">站长统计 </a><a href="">| 今日IP[1] | 今日PV[1] | 昨日IP[7] | 昨日PV[17] | </a><a href="">当前在线[0] </a></p>
+			<p>免责声明：网站所有作品均由会员网上搜集或自己编写，原作者如果认为本站侵犯了您的版权,请QQ告知,我们会立即删除!</p>
+		</div>
+	</div>
+	<div id="mask" style="display:none;">
+		<div class="login">
+			<h2>
+				<a href="">登录</a>
+				<a href="">找回密码</a>
+			</h2>
+			<div class="login-tab">
+				<div>
+					<form action="" accept-charset="utf-8">
+						<label for="username">用户名</label>
+						<input type="text" id="username">
+						<label for="password">密码</label>
+						<input type="text" id="password">
+						<label for="checkbox">记住我的登录信息</label>
+						<input type="checkbox" id="checkbox" style="float:left;margin-top:3px;">
+						<input type="button" id="submit" value="登录">
+					</form>
+				</div>
+				<div style="display:none;">
+					<p style="margin-bottom:10px;">输入用户名或电子邮箱地址，您会收到一封新密码链接的电子邮件。</p>
+					<form action="" accept-charset="utf-8">
+						<label for="ipt">用户名或电子邮件地址</label>
+						<input type="text" id="ipt">
+						<input type="button" name="" value="登录">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/template" id="template">
+		<div class="content">
+		    <div class="one">
+			<img src="@img@" alt="">
+		    </div>
+		    <div class="two">
+		    	<h4>
+				<a href="javascript:;">@h4@</a>
+				</h4>
+				<p class='text-muted'>@p@</p>
+				<p class='text-muted btm'>
+				<small>
+				   <span class="iconfont">&#xe638;</span>
+				   <a href="" class="username"></a>
+				   <span class="iconfont">&#xe672;</span>
+				  阅读(<em>0</em>) 
+				   <span class="iconfont">&#xe660;</span>
+				  评论(<em>0</em>) 
+				   <span class="iconfont">&#xe61e;</span>
+				   @time@
+				   <span class="iconfont">&#xe60f;</span>
+				   <a href="" class='text-muted'>@m1@</a>
+				   <a href="" class='text-muted'>@m2@</a>
+				   <a href="" class='text-muted'>@m3@</a>
+				</small>
+			</p>
+		    </div>
+		</div>
+	</script>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/php.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="lib/MVC.js"></script>
+	<script type="text/javascript" src="lib/slider.js"></script>
+	<script type="text/javascript">
+		new Data();
+		MVC.install();
+	</script>
+</body>
+</html>

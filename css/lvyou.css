@@ -1,0 +1,18 @@
+.banner{
+	width:1000px;
+	height:350px;
+	margin:0 auto;
+}
+.list-tab li{
+	float:left;
+}
+/*.list { font-family: "Microsoft Yahei";}*/
+.list-tab { width: 1000px; margin: 0 auto; overflow: hidden; zoom: 1;}
+.list-tab ul { 
+	    float: left;
+    width: 210px;
+    margin: 0 20px;
+    list-style-type: none;
+}
+.list-tab li { margin-bottom: 20px;}
+.list-tab img { width: 100%; border-radius: 5px; vertical-align: top;}
